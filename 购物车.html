@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+
+
 </head>
 <style type="text/css">
+    .Box .BoxButtons {
+        border-top: 0px solid #FFF;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        line-height: 30px;
+        overflow: hidden;
+        padding: 21px 26px;
+        vertical-align: right;
+        filter: alpha(Opacity=80);
+    }
+
     h1{
         text-align: center;
     }
@@ -24,12 +37,13 @@
 <body >
 <h1>Air Jordan 系列 限量抢购</h1>
 <table border="1" >
+    <form action="订单完成界面.html" method="post">
     <tr>
 
-        <th>商品</th>
-        <th> 售价 </th>
-        <th>款式</th>
-        <th>操作</th>h
+        <th>在售商品</th>
+        <th> 官方售价 </th>
+        <th>款式/配色</th>
+        <th>添加到购物车</th>h
 
     </tr>
     <tr>
@@ -38,7 +52,7 @@
         <td >1299</td>
         <td>战斗红/白色</td>
         <td align="center">
-            <input type="button" value="加入购物车" onclick="add_shoppingcar(this)"/>
+            <input type="button" value="添加到购物车" onclick="add_shoppingcar(this)"/>
         </td>
     </tr>
     <tr>
@@ -56,7 +70,7 @@
         <td >1299</td>
         <td>曜石黑/宝蓝</td>
         <td align="center">
-            <input type="button" value="加入购物车" onclick="add_shoppingcar(this)"/>
+            <input type="button" value="添加到购物车" onclick="add_shoppingcar(this)"/>
         </td>
     </tr>
     <tr>
@@ -65,11 +79,12 @@
         <td  >849</td>
         <td>黑色/驯鹿灰</td>
         <td align="center">
-            <input type="button" value="加入购物车" onclick="add_shoppingcar(this)"/>
+            <input type="button" value="添加到购物车" onclick="add_shoppingcar(this)"/>
+
         </td>
     </tr>
 </table>
-<h1> 结算【剁手吧】</h1>
+<h1> 确认您的订单</h1>
 <table border="1">
     <thead>
     <tr>
@@ -81,30 +96,20 @@
     </tr>
     </thead>
     <tbody id="goods">
-    <!--<tr>
-    <td>面膜</td>
-    <td>150</td>
-    <td align="center">
-        <input type="button" value="-" id="jian" onclick="change(this,-1);"/>-->
-    <!--readonly规定输入字段为只读-->
-    <!--<input id="text" type="text" size="1" value="1" readonly="readonly" />
-    <input type="button" value="+" id="add" onclick="change(this,1);"/>
-</td>
-<td> <input id="money" size="1" value="80"></input></td>
-<td align="center">
-    <input type="button" value="X" onclick="del(this)" />
-</td>
-</tr>-->
+
     </tbody>
     <tfoot>
     <tr>
-        <td colspan="3" align="center" >总计</td>
+        <td colspan="3" align="center" >合计(不含运费)</td>
         <td id="total"></td>
         <td>元</td>
     </tr>
     </tfoot>
 </table>
+<center><button input type="submit" value="立即付款" class="loginBtn">立即付款</center>
+</form >
 </body>
+
 <script type="text/javascript">
     //this js中指当前对象
     function add_shoppingcar(btn){
@@ -177,4 +182,5 @@
         total();
     }
 </script>
+
 </html>
