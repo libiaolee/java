@@ -16,14 +16,17 @@
             color: #fcfcfc;
             font-size: x-large;
         }
+        .total{width:1000px;height:auto;boeder:1px solid #ccc}
+        .center{width:200px;height:50px;position:absolute;left:50%;top:50%;transform:translate(-100px,-100px)}
         .Box {
             background-color: #4682B4;
-            /*上divcolor*/
             border: 1px solid #BfD6E1;
             border-radius: 50px;
             font: 16px 'Microsoft YaHei', '微软雅黑';
             margin: 100 auto;
-            width: 400px
+            width: 400px;
+            position:absolute;
+
         }
 
         .Box .BoxCenter {
@@ -82,7 +85,7 @@
 
 <div class="wrapper">
     <form action="购物车.html" method="post">
-        <div class="Box">
+        <div class="Box"  >
             <div class="BoxCenter">
                 <p><label for="username">用户名：</label></p>
                 <p><input type="text" id="text" name="text" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="请输入邮箱/手机号" value="" /></p>
